@@ -1,38 +1,20 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
-  -- Packer can manage itself
-  use "wbthomason/packer.nvim"
+  use("wbthomason/packer.nvim") -- Packer
 
-  use {
-    'nvim-telescope/telescope.nvim', tag = "0.1.0",
-    requires = { { "nvim-lua/plenary.nvim" } }
-  }
+  use("neovim/nvim-lspconfig") -- LSP
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+      require('lspsaga').setup({})
+    end,
+  }) -- LSP UIs
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
 
-  -- LSP
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    requires = {
-      -- LSP Support
-      { 'neovim/nvim-lspconfig' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-
-      -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lua' },
-
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },
-      -- Snippet Collection (Optional)
-      { 'rafamadriz/friendly-snippets' },
-    }
-  }
-
+  -- Trouble
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -41,38 +23,38 @@ return require("packer").startup(function(use)
     end
   }
 
-  use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      require('lspsaga').setup({
-      })
-    end,
-  })
+  -- use("github/copilot.vim") -- Copilot for vim
 
-  use("github/copilot.vim")
+  use("onsails/lspkind-nvim") -- vscode-like pictograms
+  use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
+  use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's buil-in LSP
+  use("hrsh7th/nvim-cmp") -- Completion
+  use("L3MON4D3/LuaSnip") -- Snippets
+  use("preservim/nerdtree") -- File explorer
+  use("ryanoasis/vim-devicons") -- Icons
+  -- use("kyazdani42/nvim-web-devicons") -- Icons
+  use("vim-airline/vim-airline") -- Status Line
+  use("theprimeagen/harpoon") -- Frecuent files
 
-  -- Editor Plugins
-  use("preservim/nerdtree")
-  use("ryanoasis/vim-devicons")
-  use("vim-airline/vim-airline")
-  use("MaxMEllon/vim-jsx-pretty")
-  use("theprimeagen/harpoon")
-  use("tpope/vim-fugitive")
-  use("tpope/vim-surround")
-  use("tpope/vim-commentary")
+  use("dinhhuy258/git.nvim") -- Git
+  use("lewis6991/gitsigns.nvim") -- Git Signs
+
+  use("tpope/vim-surround") -- Surround
+  use("tpope/vim-commentary") -- Comment
+  use("mbbill/undotree") -- Undo tree
+  use("norcalli/nvim-colorizer.lua") -- Colorizer
+
+  use("windwp/nvim-autopairs") -- Autopairs
+  use("windwp/nvim-ts-autotag") -- Autotag
+
   use("jose-elias-alvarez/null-ls.nvim")
-  use("MunifTanjim/prettier.nvim")
-  use("mbbill/undotree")
-  use("lewis6991/gitsigns.nvim")
-  use("nvim-lua/plenary.nvim")
-  use("windwp/nvim-autopairs")
-  use("windwp/nvim-ts-autotag")
+  use("MunifTanjim/prettier.nvim") -- Prettier
 
-  -- Colorscheme
-  use("morhetz/gruvbox")
+  use("nvim-lua/plenary.nvim") -- Common utilities
+  use("nvim-telescope/telescope.nvim")
+  use("nvim-telescope/telescope-file-browser.nvim")
 
-  -- Treesitter
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  use("morhetz/gruvbox") -- Best colorscheme
+
+  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" }) -- Treesitter
 end)
-

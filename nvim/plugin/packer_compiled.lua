@@ -89,30 +89,10 @@ _G.packer_plugins = {
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lua"] = {
+  ["git.nvim"] = {
     loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
+    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/git.nvim",
+    url = "https://github.com/dinhhuy258/git.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -129,10 +109,10 @@ _G.packer_plugins = {
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["lsp-zero.nvim"] = {
+  ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0" },
@@ -170,6 +150,11 @@ _G.packer_plugins = {
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -205,6 +190,11 @@ _G.packer_plugins = {
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -235,16 +225,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/renzo/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-jsx-pretty"] = {
-    loaded = true,
-    path = "/home/renzo/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
-    url = "https://github.com/MaxMEllon/vim-jsx-pretty"
   },
   ["vim-surround"] = {
     loaded = true,
