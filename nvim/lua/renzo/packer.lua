@@ -32,21 +32,27 @@ return require("packer").startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end
+  }
+
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",
     config = function()
-      local saga = require("lspsaga")
-
-      saga.init_lsp_saga({
-        -- your configuration
+      require('lspsaga').setup({
       })
     end,
   })
+
   use("github/copilot.vim")
 
   -- Editor Plugins
-  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use("preservim/nerdtree")
   use("ryanoasis/vim-devicons")
   use("vim-airline/vim-airline")
@@ -69,3 +75,4 @@ return require("packer").startup(function(use)
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 end)
+
