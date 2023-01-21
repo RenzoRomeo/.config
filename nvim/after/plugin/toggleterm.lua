@@ -21,10 +21,10 @@ function _G.set_terminal_keymaps()
   vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 end
 
-local Terminal = require("toggleterm.terminal").Terminal
+-- local Terminal = require("toggleterm.terminal").Terminal
 
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+-- local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
-function _LAZYGIT_TOGGLE()
-  lazygit:toggle()
-end
+-- function _LAZYGIT_TOGGLE()
+--   lazygit:toggle()
+-- end

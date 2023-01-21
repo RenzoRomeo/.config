@@ -30,11 +30,18 @@ return require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's buil-in LSP
   use("hrsh7th/nvim-cmp") -- Completion
   use("L3MON4D3/LuaSnip") -- Snippets
-  use("preservim/nerdtree") -- File explorer
-  use("ryanoasis/vim-devicons") -- Icons
-  -- use("kyazdani42/nvim-web-devicons") -- Icons
   use("vim-airline/vim-airline") -- Status Line
   use("theprimeagen/harpoon") -- Frecuent files
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  } -- File Explorer
+
+  use("christoomey/vim-tmux-navigator") -- Navigator
 
   use("dinhhuy258/git.nvim") -- Git
   use("lewis6991/gitsigns.nvim") -- Git Signs
