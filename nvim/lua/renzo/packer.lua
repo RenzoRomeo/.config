@@ -3,7 +3,6 @@ vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim") -- Packer
 
-  use("neovim/nvim-lspconfig") -- LSP
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",
@@ -13,6 +12,7 @@ return require("packer").startup(function(use)
   }) -- LSP UIs
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
+  use("neovim/nvim-lspconfig")
 
   -- Trouble
   use {
