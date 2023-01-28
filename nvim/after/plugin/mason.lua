@@ -7,7 +7,6 @@ if (not status2) then return end
 mason.setup({})
 
 lspconfig.setup({
-  ensure_installed = { "tailwindcss", "prismals" }
 })
 
 require("lspconfig").tailwindcss.setup({})
