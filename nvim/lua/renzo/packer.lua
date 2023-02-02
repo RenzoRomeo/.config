@@ -23,7 +23,7 @@ return require("packer").startup(function(use)
     end
   }
 
-  -- use("github/copilot.vim") -- Copilot for vim
+  use("github/copilot.vim") -- Copilot for vim
 
   use("onsails/lspkind-nvim") -- vscode-like pictograms
   use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
