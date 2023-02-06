@@ -6,5 +6,6 @@ return {
     keys[#keys + 1] = { "gd", "<Cmd>Lspsaga goto_definition<CR>" }
     keys[#keys + 1] = { "gf", "<Cmd>Lspsaga lsp_finder<CR>" }
     keys[#keys + 1] = { "gr", "<Cmd>Lspsaga rename<CR>" }
+    keys[#keys + 1] = { "gca", "<Cmd>Lspsaga code_action<CR>" }
   end,
 }
