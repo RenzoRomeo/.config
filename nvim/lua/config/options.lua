@@ -1,11 +1,20 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+-- Line numbers
+vim.o.number = true
+vim.o.relativenumber = true
 
-vim.g.mapleader = ","
+-- Tabs
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.smartindent = true -- Use one tab after newline
+vim.o.expandtab = true -- Use spaces instead of tabs
+
+vim.o.wrap = true -- Line wrap
+vim.o.hlsearch = false -- Don't highlight search
 vim.o.termguicolors = true
-vim.o.wrap = true
-vim.opt.hlsearch = false
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 8
+
+vim.opt.scrolloff = 8 -- Scroll with 8 lines padding
+
+-- Persist undo
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true

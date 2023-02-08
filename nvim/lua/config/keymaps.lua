@@ -1,13 +1,29 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
-vim.keymap.set("n", "<leader>d", "<Cmd>Neotree toggle<CR>")
+-- Open file explorer
+map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
+
+-- Telescope
+map("n", "<leader>sf", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>sg", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>sb", "<cmd>Telescope buffers<cr>")
+
+-- LazyGit
+map("n", "<leader>lg", "<cmd>LazyGit<cr>")
 
 -- Lspsaga
-local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<C-q>", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-vim.keymap.set("n", "<C-Q>", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-vim.keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)
-vim.keymap.set("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts)
-vim.keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
+map("n", "K", "<cmd>Lspsaga hover_doc<cr>")
+map("n", "gd", "<cmd>Lspsaga goto_definition<cr>")
+map("n", "gr", "<cmd>Lspsaga rename<cr>")
+map("n", "gf", "<cmd>Lspsaga lsp_finder<cr>")
+map("n", "gca", "<cmd>Lspsaga code_action<cr>")
+
+-- Center search results
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
